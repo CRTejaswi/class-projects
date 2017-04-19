@@ -1,0 +1,62 @@
+==================================================================================================
+SmartPhones
+==========================================================
+SMPmicE455 = 7800
+	http://www.gsmarena.com/micromax_canvas_nitro_4g_e455-7665.php
+SMPgooPixXL = 67,000
+	http://www.gsmarena.com/google_pixel_xl-8345.php
+SMPonp3T = 30,000
+	http://www.gsmarena.com/oneplus_3t-8416.php
+SMPhtc10 = 40,000
+	http://www.gsmarena.com/htc_10-7884.php
+SMPsamGal6 = 24,500
+	http://www.gsmarena.com/samsung_galaxy_s6-6849.php
+SMPlenA7020a48 = 13,000
+	http://www.gsmarena.com/lenovo_k5_note-7878.php
+SMPlenK33A42 = 11,000
+	http://www.gsmarena.com/lenovo_k6_power-8317.php
+SMPyuYU5530 = 9500
+	http://www.gsmarena.com/yu_yunicorn-8002.php
+SMPlenA6020a46 = 8500
+	http://www.gsmarena.com/lenovo_vibe_k5_plus-7947.php
+SMPasuZC521TL = 15,000
+	http://www.gsmarena.com/asus_zenfone_3s_max_zc521tl-8550.php
+==========================================================
+qrcSMP = ['SMPmicE455','SMPgooPixXL',SMPonp3T','SMPhtc10','SMPsamGal6','SMPlenA7020a48','SMPlenK33A42','SMPyuYU5530','SMPlenA6020a46','SMPasuZC521TL']
+qrcSMPweb = ['http://www.gsmarena.com/micromax_canvas_nitro_4g_e455-7665.php','http://www.gsmarena.com/google_pixel_xl-8345.php','http://www.gsmarena.com/oneplus_3t-8416.php','http://www.gsmarena.com/htc_10-7884.php','http://www.gsmarena.com/samsung_galaxy_s6-6849.php','http://www.gsmarena.com/lenovo_k5_note-7878.php','http://www.gsmarena.com/lenovo_k6_power-8317.php','http://www.gsmarena.com/yu_yunicorn-8002.php','http://www.gsmarena.com/lenovo_vibe_k5_plus-7947.php','http://www.gsmarena.com/asus_zenfone_3s_max_zc521tl-8550.php']
+===================================================================================================
+YouTube Links
+==========================================================
+YTBnptece01
+	https://www.youtube.com/channel/UCdDLuSAR5CCBGDkgKuqPA3A
+YTBnptee01
+	https://www.youtube.com/channel/UCTJn6buigC961hns17ELXAQ
+YTBnptcse01
+	https://www.youtube.com/channel/UCxJp9aEteKmOeobEsHXwxAw
+YTBnptme01
+	https://www.youtube.com/channel/UCqBiwZuVP0NzSu4QR91v4jQ
+YTBnptce01
+	https://www.youtube.com/channel/UCAVi5Zg6zSoyZUyKBtCJfmg
+YTBnptase01
+	https://www.youtube.com/channel/UCiY8ERfD4qvD_-d-VUWh_GA
+YTBnptche01//chem
+	https://www.youtube.com/channel/UCqqc1GmsuANsx3s3Y0C-BsQ
+YTBnptphy01//physics
+	https://www.youtube.com/channel/UC9vycSfjzLCR_w1C59VQo5A
+YTBnptbio01//BioTech
+	https://www.youtube.com/channel/UCbWTmSK7bYM9kRZAdfy_gyg
+YTBnpthsc01//Humanities & Social Sciences
+	https://www.youtube.com/channel/UCnLoshotJ_FRpzFmOChRPaQ
+==========================================================
+qrcYTB = ['YTBnptece01','YTBnptee01','YTBnptcse01','YTBnptme01','YTBnptce01','YTBnptase01','YTBnptche01','YTBnptphy01','YTBnptbio01','YTBnpthsc01']
+qrcYTBweb = ['https://www.youtube.com/channel/UCdDLuSAR5CCBGDkgKuqPA3A','https://www.youtube.com/channel/UCTJn6buigC961hns17ELXAQ','https://www.youtube.com/channel/UCxJp9aEteKmOeobEsHXwxAw','https://www.youtube.com/channel/UCqBiwZuVP0NzSu4QR91v4jQ','https://www.youtube.com/channel/UCAVi5Zg6zSoyZUyKBtCJfmg','https://www.youtube.com/channel/UCiY8ERfD4qvD_-d-VUWh_GA','https://www.youtube.com/channel/UCqqc1GmsuANsx3s3Y0C-BsQ','https://www.youtube.com/channel/UC9vycSfjzLCR_w1C59VQo5A','https://www.youtube.com/channel/UCbWTmSK7bYM9kRZAdfy_gyg','https://www.youtube.com/channel/UCnLoshotJ_FRpzFmOChRPaQ']
+===================================================================================================
+ITEMS
+==========================================================
+ITEM00 = Maggi
+ITEM01 = Shampoo
+ITEM02 = Chocolate
+ITEM03 = Shoe Polish
+ITEM04 = T-Shirt
+==========================================================
+qrcITEMS = ['ITEM00','ITEM01','ITEM02','ITEM03','ITEM04'] 
