@@ -7,9 +7,7 @@ droid2 = androidhelper.Android()
 ########################### SAMPLE DATA #########################	
 """
 qrcSMP = QRCode(Smartphones)
-qrcCNT = QRCode(ClassNotes)
 qrcYTB = QRCode(Youtube Links)
-brcBOK = BarCode(Books)
 """ 
 ################################################################# 
 qrcSMP = ['SMPmice455','SMPgooPixXL','SMPonp3T','SMPhtc10','SMPsamGal6','SMPlenA7020a48','SMPlenK33A42','SMPyuYU5530','SMPlenA6020a46','SMPasuZC521TL']
