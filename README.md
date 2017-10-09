@@ -6,3 +6,4 @@ Projects created as a part of classwork
 2. World Time Interface = Simple HTML Script to display current time for 150 countries.
 3. Sampling Theorem = Simple lowpass and bandpass filter implementation in MATLAB (as an application of Sampling Theorem).
 4. Personal Info Assistant = (qrcPIA) QRC-based info-assistant examples. Uses QPython3 for Android.
+5. PPTs = Consists of PPTs presented as part of classroomwork, uploaded as PDF files.
