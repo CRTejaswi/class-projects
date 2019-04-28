@@ -1,554 +1,553 @@
 <html>
 <head>
-<title>World Time Bank</title>
-<noscript style="font-family: Trebuchet MS; font-size: 11pt; color: Yellow ;"> This Application Requires JavaScript Plug-in which has to be initialized or installed. It seems that your OS does not have the Plug-in Installed or has been disabled by you. Please Enable/Install the Plug-in. If you have the plug-in and is currently disabled, right-click on the light yellow bar above, Chose "Allow Blocked Content..." and then click "Yes" from the consecutive dialog box, you should see the Application running, or else install the plug-in from Internet/Reliable Disc.</noscript> 
-<style>
-td
-{
-border:1;
-font-family:Footlight MT Light;
-font-size:11pt;
-background-color:Darkgreen;
-color:Yellow;
-text-align:center;
-}
-</style>
-<script language="JavaScript">
-function TimeZone(tz, os, ds, cl)
-{
-this.ct=new Date();
-this.tz=tz;
-this.os=os;
-this.ds=ds;
-this.cl=cl;
-}
-function WorldTime()
-{
-var ct = new Array(
-new TimeZone('Afghanistan ', -1.5, 0, 'Yellow'),
-new TimeZone('Albania ', -4.5, 0, 'Yellow'),
-new TimeZone('Algeria ', -4.5, 0, 'Yellow'),
-new TimeZone('Antilles ', -9.5, 0, 'Yellow'),
-new TimeZone('Argentina ',  -8.5, 0, 'Yellow'),
-new TimeZone('Australia1 ', +2.5, 0, 'Yellow'),
-new TimeZone('Australia2 ', +4.5, 0, 'Yellow'),
-new TimeZone('Austria ',-4.5, 0, 'Yellow'),
-new TimeZone('Bahamas ', -10.5, 0, 'Yellow'),
-new TimeZone('Bahrain ', -2.5, 0, 'Yellow'),
-new TimeZone('Bangladesh ', +0.5, 0, 'Yellow'),
-new TimeZone('Barbados ', -9.5, 0, 'Yellow'),
-new TimeZone('Belgium ',  -4.5, 0, 'Yellow'),
-new TimeZone('Belize ', -11.5, 0, 'Yellow'),
-new TimeZone('Benin ', -4.5,0, 'Yellow'),
-new TimeZone('Bermuda ', -9.5, 0, 'Yellow'),
-new TimeZone('Bolivia ', -9.5, 0, 'Yellow'),
-new TimeZone('Botswana ', -3.5, 0, 'Yellow'),
-new TimeZone('Brazil ', -8.5, 0, 'Yellow'),
-new TimeZone('Brunei ', +2.5, 0, 'Yellow'),
-new TimeZone('Bulgaria ',  -2.5, 0, 'Yellow'),
-new TimeZone('BurkinaFaso ', -5.5, 0, 'Yellow'),
-new TimeZone('CAfricaRp. ', -4.0, 0, 'Yellow'),
-new TimeZone('Cameroon ', -4.5, 0, 'Yellow'),
-new TimeZone('Canada1 ', -9.0, 0, 'Yellow'),
-new TimeZone('Canada2 ', +14.5, 0, 'Yellow'),
-new TimeZone('Chad ', -4.5, 0, 'Yellow'),
-new TimeZone('Chile ',  -9.5, 0, 'Yellow'),
-new TimeZone('China ', +2.5, 0, 'Yellow'),
-new TimeZone('Colombia ', -10.5, 0, 'Yellow'),
-new TimeZone('Congo ', -4.5, 0, 'Yellow'),
-new TimeZone('Costa Rica ', -11.5, 0, 'Yellow'),
-new TimeZone('CoteDIvory ', -5.5, 0, 'Yellow'),
-new TimeZone('Cuba ', -10.5, 0, 'Yellow'),
-new TimeZone('Czech Rp. ', -4.5, 0, 'Yellow'),
-new TimeZone('Denmark ', -4.5, 0, 'Yellow'),
-new TimeZone('Deutschland ', -4.5, 0, 'Yellow'),
-new TimeZone('Djibouti ',  -2.5, 0, 'Yellow'),
-new TimeZone('Domini Is. ', -9.5, 0, 'Yellow'),
-new TimeZone('Domini Rp. ', -9.5, 0, 'Yellow'),
-new TimeZone('Egypt ', -3.5, 0, 'Yellow'),
-new TimeZone('England ', -5.5, 0, 'Yellow'),
-new TimeZone('Ecuador ', -10.5, 0, 'Yellow'),
-new TimeZone('Ethiopia ', -2.5, 0, 'Yellow'),
-new TimeZone('Fiji ', +6.5, 0, 'Yellow'),
-new TimeZone('Finland ', -3.5, 0, 'Yellow'),
-new TimeZone('France ',  -4.5, 0, 'Yellow'),
-new TimeZone('Gambia ', -5.5, 0, 'Yellow'),
-new TimeZone('Guatemala ', -11.5, 0, 'Yellow'),
-new TimeZone('Ghana ',-5.5, 0, 'Yellow'),
-new TimeZone('Gibraltar ', -4.5, 0, 'Yellow'),
-new TimeZone('Granada ', -9.5, 0, 'Yellow'),
-new TimeZone('Greece ', -3.5, 0, 'Yellow'),
-new TimeZone('Guyana ',  -8.5, 0, 'Yellow'),
-new TimeZone('Haiti ', -10.5, 0, 'Yellow'),
-new TimeZone('Hawaii ', -16.0, 0, 'Yellow'),
-new TimeZone('Honduras ', -11.5,0, 'Yellow'),
-new TimeZone('Hong Kong ', +2.5, 0, 'Yellow'),
-new TimeZone('Hungary ', -4.5, 0, 'Yellow'),
-new TimeZone('Iceland ', -5.5, 0, 'Yellow'),
-new TimeZone('India ', 0, 0, 'Yellow'),
-new TimeZone('Indonesia1 ', +1.5, 0, 'Yellow'),
-new TimeZone('Indonesia2 ', +3.5, 0, 'Yellow'),
-new TimeZone('Iran ',  -2.0, 0, 'Yellow'),
-new TimeZone('Iraq ', -2.5, 0, 'Yellow'),
-new TimeZone('Ireland ', -5.5, 0, 'Yellow'),
-new TimeZone('Italy ', -4.5, 0, 'Yellow'),
-new TimeZone('Jamaica ', -10.5, 0, 'Yellow'),
-new TimeZone('Japan ', +3.5, 0, 'Yellow'),
-new TimeZone('Jordan ', -3.5, 0, 'Yellow'),
-new TimeZone('Kenya ',  -2.5, 0, 'Yellow'),
-new TimeZone('Korea (N/S) ', +3.5, 0, 'Yellow'),
-new TimeZone('Kuwait ', -2.5, 0, 'Yellow'),
-new TimeZone('Lebanon ',-3.5, 0, 'Yellow'),
-new TimeZone('Liberia ', -5.5, 0, 'Yellow'),
-new TimeZone('Libya ', -3.5, 0, 'Yellow'),
-new TimeZone('Luxembourg ', -4.5, 0, 'Yellow'),
-new TimeZone('Malawi ', -3.5, 0, 'Yellow'),
-new TimeZone('Malaysia ',  +2.5, 0, 'Yellow'),
-new TimeZone('Maldives ', -0.5, 0, 'Yellow'),
-new TimeZone('Mali ', -5.5,0, 'Yellow'),
-new TimeZone('Malta ', -4.5, 0, 'Yellow'),
-new TimeZone('Marshall Is. ', +6.5, 0, 'Yellow'),
-new TimeZone('Mexico ', -11.5, 0, 'Yellow'),
-new TimeZone('Micronesia1 ', +3.5, 0, 'Yellow'),
-new TimeZone('Micronesia2 ', +5.5, 0, 'Yellow'),
-new TimeZone('Montserrat ',  -9.5, 0, 'Yellow'),
-new TimeZone('Morocco ', -5.5, 0, 'Yellow'),
-new TimeZone('Mozambique ', -3.5, 0, 'Yellow'),
-new TimeZone('Myanmar ', +1.0, 0, 'Yellow'),
-new TimeZone('Namibia ', -3.5, 0, 'Yellow'),
-new TimeZone('Nauru ', +6.5, 0, 'Yellow'),
-new TimeZone('Nepal ', 0, 0, 'Yellow'),
-new TimeZone('Netherlands ', -4.5, 0, 'Yellow'),
-new TimeZone('NewYork ', -10.5, 0, 'Yellow'),
-new TimeZone('NewZealand ',  +6.5, 0, 'Yellow'),
-new TimeZone('Nicaragua ', -11.5, 0, 'Yellow'),
-new TimeZone('Niger ', -5.5, 0, 'Yellow'),
-new TimeZone('Nigeria ', -4.5, 0, 'Yellow'),
-new TimeZone('Norway ', -4.5, 0, 'Yellow'),
-new TimeZone('Oman  ', -1.5, 0, 'Yellow'),
-new TimeZone('Pakistan ', -0.5, 0, 'Yellow'),
-new TimeZone('Panama ', -10.5, 0, 'Yellow'),
-new TimeZone('PapuaGuinea ',  +4.5, 0, 'Yellow'),
-new TimeZone('Paraguay ', -9.5, 0, 'Yellow'),
-new TimeZone('Peru ', -10.5, 0, 'Yellow'),
-new TimeZone('Phoenix ', -12.5, 0, 'Yellow'),
-new TimeZone('Philippines ', +2.5, 0, 'Yellow'),
-new TimeZone('Poland ', -4.5, 0, 'Yellow'),
-new TimeZone('Porto Rica ', -9.5, 0, 'Yellow'),
-new TimeZone('Portugal ', -5.5, 0, 'Yellow'),
-new TimeZone('Qatar ', -2.5, 0, 'Yellow'),
-new TimeZone('Romania ',  -3.5, 0, 'Yellow'),
-new TimeZone('Russia1 ', -2.5, 0, 'Yellow'),
-new TimeZone('Russia2 ', +5.5, 0, 'Yellow'),
-new TimeZone('SanFrancisco ', -13.5, 0, 'Yellow'),
-new TimeZone('SaudiArabia ',-2.5, 0, 'Yellow'),
-new TimeZone('Senegal ', -5.5, 0, 'Yellow'),
-new TimeZone('Seychelles ', -1.5, 0, 'Yellow'),
-new TimeZone('Sierra Leone ', -5.5, 0, 'Yellow'),
-new TimeZone('Singapore ', +2.5, 0, 'Yellow'),
-new TimeZone('Somalia ',  -2.5, 0, 'Yellow'),
-new TimeZone('Spain ', -4.5, 0, 'Yellow'),
-new TimeZone('Sri Lanka ', 0,0, 'Yellow'),
-new TimeZone('Sudan ', -3.5, 0, 'Yellow'),
-new TimeZone('Suriname ', -8.5, 0, 'Yellow'),
-new TimeZone('Swaziland ', -3.5, 0, 'Yellow'),
-new TimeZone('Sweden ', -4.5, 0, 'Yellow'),
-new TimeZone('Switzerland ',-4.5,0,'Yellow'),
-new TimeZone('Syria ', -3.5, 0, 'Yellow'),
-new TimeZone('Taiwan ',  +2.5, 0, 'Yellow'),
-new TimeZone('Tanzania ', -2.5, 0, 'Yellow'),
-new TimeZone('Texas ', -11.5, 0, 'Yellow'),
-new TimeZone('Thailand ', +1.5, 0, 'Yellow'),
-new TimeZone('Tonga ',+7.5, 0, 'Yellow'),
-new TimeZone('Trinidad ', -9.5, 0, 'Yellow'),
-new TimeZone('Tunisia ', -4.5, 0, 'Yellow'),
-new TimeZone('Turkey ', -2.5, 0, 'Yellow'),
-new TimeZone('UAEmirates ',  -1.5, 0, 'Yellow'),
-new TimeZone('Uganda ', -2.5, 0, 'Yellow'),
-new TimeZone('Uruguay ', -8.5,0, 'Yellow'),
-new TimeZone('Vanuatu ', -5.5, 0, 'Yellow'),
-new TimeZone('Vatican ', -4.5, 0, 'Yellow'),
-new TimeZone('Venezuela ', -9.5, 0, 'Yellow'),
-new TimeZone('Yemen ', -2.5, 0, 'Yellow'),
-new TimeZone('Yemen Is. ', -10.5, 0, 'Yellow'),
-new TimeZone('Yugoslavia ', -4.5, 0, 'Yellow'),
-new TimeZone('Zaire ',  -4.5, 0, 'Yellow'),
-new TimeZone('Zambia ', -3.5, 0, 'Yellow'),
-new TimeZone('Zimbabwe ', -2.5, 0, 'Yellow'));
-var day = new Date();
-var DaylightSavingTimeOn = new Date(day.getFullYear(), 3, 1);
-while (DaylightSavingTimeOn.getDay() != 0)
-DaylightSavingTimeOn.setDate(DaylightSavingTimeOn.getDate() + 1);
-var DaylightSavingTimeOff = new Date(day.getFullYear(), 9, 31);
-while (DaylightSavingTimeOff.getDay() != 0)
-DaylightSavingTimeOff.setDate(DaylightSavingTimeOff.getDate() - 1);
-if (DaylightSavingTimeOn < day && day < DaylightSavingTimeOff)
-DaylightSavingActive=1;
-else
-DaylightSavingActive=0;
-for(n=0; n<ct.length; n++)
-if (ct[n].ds == 1 && DaylightSavingActive == 1) ct[n].os++;
-IndianStandardTime = new Date();
-for (n=0; n<ct.length; n++)
-ct[n].ct = new Date(IndianStandardTime.getTime() + ct[n].os * 3600 * 1000);
-document.getElementById("Clock0").innerHTML='<font color="' + ct[0].cl + '">' + ct[0].tz + ClockString(ct[0].ct) + '</font>';
-document.getElementById("Clock1").innerHTML='<font color="' + ct[1].cl + '">' + ct[1].tz + ClockString(ct[1].ct) + '</font>';
-document.getElementById("Clock2").innerHTML='<font color="' + ct[2].cl + '">' + ct[2].tz + ClockString(ct[2].ct) + '</font>';
-document.getElementById("Clock3").innerHTML='<font color="' + ct[3].cl + '">' + ct[3].tz + ClockString(ct[3].ct) + '</font>';
-document.getElementById("Clock4").innerHTML='<font color="' + ct[4].cl + '">' + ct[4].tz + ClockString(ct[4].ct) + '</font>';
-document.getElementById("Clock5").innerHTML='<font color="' + ct[5].cl + '">' + ct[5].tz + ClockString(ct[5].ct) + '</font>';
-document.getElementById("Clock6").innerHTML='<font color="' + ct[6].cl + '">' + ct[6].tz + ClockString(ct[6].ct) + '</font>';
-document.getElementById("Clock7").innerHTML='<font color="' + ct[7].cl + '">' + ct[7].tz + ClockString(ct[7].ct) + '</font>';
-document.getElementById("Clock8").innerHTML='<font color="' + ct[8].cl + '">' + ct[8].tz + ClockString(ct[8].ct) + '</font>';
-document.getElementById("Clock9").innerHTML='<font color="' + ct[9].cl + '">' + ct[9].tz + ClockString(ct[9].ct) + '</font>';
-document.getElementById("Clock10").innerHTML='<font color="' + ct[10].cl + '">' + ct[10].tz + ClockString(ct[10].ct) + '</font>';
-document.getElementById("Clock11").innerHTML='<font color="' + ct[11].cl + '">' + ct[11].tz + ClockString(ct[11].ct) + '</font>';
-document.getElementById("Clock12").innerHTML='<font color="' + ct[12].cl + '">' + ct[12].tz + ClockString(ct[12].ct) + '</font>';
-document.getElementById("Clock13").innerHTML='<font color="' + ct[13].cl + '">' + ct[13].tz + ClockString(ct[13].ct) + '</font>';
-document.getElementById("Clock14").innerHTML='<font color="' + ct[14].cl + '">' + ct[14].tz + ClockString(ct[14].ct) + '</font>';
-document.getElementById("Clock15").innerHTML='<font color="' + ct[15].cl + '">' + ct[15].tz + ClockString(ct[15].ct) + '</font>';
-document.getElementById("Clock16").innerHTML='<font color="' + ct[16].cl + '">' + ct[16].tz + ClockString(ct[16].ct) + '</font>';
-document.getElementById("Clock17").innerHTML='<font color="' + ct[17].cl + '">' + ct[17].tz + ClockString(ct[17].ct) + '</font>';
-document.getElementById("Clock18").innerHTML='<font color="' + ct[18].cl + '">' + ct[18].tz + ClockString(ct[18].ct) + '</font>';
-document.getElementById("Clock19").innerHTML='<font color="' + ct[19].cl + '">' + ct[19].tz + ClockString(ct[19].ct) + '</font>';
-document.getElementById("Clock20").innerHTML='<font color="' + ct[20].cl + '">' + ct[20].tz + ClockString(ct[20].ct) + '</font>';
-document.getElementById("Clock21").innerHTML='<font color="' + ct[21].cl + '">' + ct[21].tz + ClockString(ct[21].ct) + '</font>';
-document.getElementById("Clock22").innerHTML='<font color="' + ct[22].cl + '">' + ct[22].tz + ClockString(ct[22].ct) + '</font>';
-document.getElementById("Clock23").innerHTML='<font color="' + ct[23].cl + '">' + ct[23].tz + ClockString(ct[23].ct) + '</font>';
-document.getElementById("Clock24").innerHTML='<font color="' + ct[24].cl + '">' + ct[24].tz + ClockString(ct[24].ct) + '</font>';
-document.getElementById("Clock25").innerHTML='<font color="' + ct[25].cl + '">' + ct[25].tz + ClockString(ct[25].ct) + '</font>';
-document.getElementById("Clock26").innerHTML='<font color="' + ct[26].cl + '">' + ct[26].tz + ClockString(ct[26].ct) + '</font>';
-document.getElementById("Clock27").innerHTML='<font color="' + ct[27].cl + '">' + ct[27].tz + ClockString(ct[27].ct) + '</font>';
-document.getElementById("Clock28").innerHTML='<font color="' + ct[28].cl + '">' + ct[28].tz + ClockString(ct[28].ct) + '</font>';
-document.getElementById("Clock29").innerHTML='<font color="' + ct[29].cl + '">' + ct[29].tz + ClockString(ct[29].ct) + '</font>';
-document.getElementById("Clock30").innerHTML='<font color="' + ct[30].cl + '">' + ct[30].tz + ClockString(ct[30].ct) + '</font>';
-document.getElementById("Clock31").innerHTML='<font color="' + ct[31].cl + '">' + ct[31].tz + ClockString(ct[31].ct) + '</font>';
-document.getElementById("Clock32").innerHTML='<font color="' + ct[32].cl + '">' + ct[32].tz + ClockString(ct[32].ct) + '</font>';
-document.getElementById("Clock33").innerHTML='<font color="' + ct[33].cl + '">' + ct[33].tz + ClockString(ct[33].ct) + '</font>';
-document.getElementById("Clock34").innerHTML='<font color="' + ct[34].cl + '">' + ct[34].tz + ClockString(ct[34].ct) + '</font>';
-document.getElementById("Clock35").innerHTML='<font color="' + ct[35].cl + '">' + ct[35].tz + ClockString(ct[35].ct) + '</font>';
-document.getElementById("Clock36").innerHTML='<font color="' + ct[36].cl + '">' + ct[36].tz + ClockString(ct[36].ct) + '</font>';
-document.getElementById("Clock37").innerHTML='<font color="' + ct[37].cl + '">' + ct[37].tz + ClockString(ct[37].ct) + '</font>';
-document.getElementById("Clock38").innerHTML='<font color="' + ct[38].cl + '">' + ct[38].tz + ClockString(ct[38].ct) + '</font>';
-document.getElementById("Clock39").innerHTML='<font color="' + ct[39].cl + '">' + ct[39].tz + ClockString(ct[39].ct) + '</font>';
-document.getElementById("Clock40").innerHTML='<font color="' + ct[40].cl + '">' + ct[40].tz + ClockString(ct[40].ct) + '</font>';
-document.getElementById("Clock41").innerHTML='<font color="' + ct[41].cl + '">' + ct[41].tz + ClockString(ct[41].ct) + '</font>';
-document.getElementById("Clock42").innerHTML='<font color="' + ct[42].cl + '">' + ct[42].tz + ClockString(ct[42].ct) + '</font>';
-document.getElementById("Clock43").innerHTML='<font color="' + ct[43].cl + '">' + ct[43].tz + ClockString(ct[43].ct) + '</font>';
-document.getElementById("Clock44").innerHTML='<font color="' + ct[44].cl + '">' + ct[44].tz + ClockString(ct[44].ct) + '</font>';
-document.getElementById("Clock45").innerHTML='<font color="' + ct[45].cl + '">' + ct[45].tz + ClockString(ct[45].ct) + '</font>';
-document.getElementById("Clock46").innerHTML='<font color="' + ct[46].cl + '">' + ct[46].tz + ClockString(ct[46].ct) + '</font>';
-document.getElementById("Clock47").innerHTML='<font color="' + ct[47].cl + '">' + ct[47].tz + ClockString(ct[47].ct) + '</font>';
-document.getElementById("Clock48").innerHTML='<font color="' + ct[48].cl + '">' + ct[48].tz + ClockString(ct[48].ct) + '</font>';
-document.getElementById("Clock49").innerHTML='<font color="' + ct[49].cl + '">' + ct[49].tz + ClockString(ct[49].ct) + '</font>';
-document.getElementById("Clock50").innerHTML='<font color="' + ct[50].cl + '">' + ct[50].tz + ClockString(ct[50].ct) + '</font>';
-document.getElementById("Clock51").innerHTML='<font color="' + ct[51].cl + '">' + ct[51].tz + ClockString(ct[51].ct) + '</font>';
-document.getElementById("Clock52").innerHTML='<font color="' + ct[52].cl + '">' + ct[52].tz + ClockString(ct[52].ct) + '</font>';
-document.getElementById("Clock53").innerHTML='<font color="' + ct[53].cl + '">' + ct[53].tz + ClockString(ct[53].ct) + '</font>';
-document.getElementById("Clock54").innerHTML='<font color="' + ct[54].cl + '">' + ct[54].tz + ClockString(ct[54].ct) + '</font>';
-document.getElementById("Clock55").innerHTML='<font color="' + ct[55].cl + '">' + ct[55].tz + ClockString(ct[55].ct) + '</font>';
-document.getElementById("Clock56").innerHTML='<font color="' + ct[56].cl + '">' + ct[56].tz + ClockString(ct[56].ct) + '</font>';
-document.getElementById("Clock57").innerHTML='<font color="' + ct[57].cl + '">' + ct[57].tz + ClockString(ct[57].ct) + '</font>';
-document.getElementById("Clock58").innerHTML='<font color="' + ct[58].cl + '">' + ct[58].tz + ClockString(ct[58].ct) + '</font>';
-document.getElementById("Clock59").innerHTML='<font color="' + ct[59].cl + '">' + ct[59].tz + ClockString(ct[59].ct) + '</font>';
-document.getElementById("Clock60").innerHTML='<font color="' + ct[60].cl + '">' + ct[60].tz + ClockString(ct[60].ct) + '</font>';
-document.getElementById("Clock61").innerHTML='<font color="' + ct[61].cl + '">' + ct[61].tz + ClockString(ct[61].ct) + '</font>';
-document.getElementById("Clock62").innerHTML='<font color="' + ct[62].cl + '">' + ct[62].tz + ClockString(ct[62].ct) + '</font>';
-document.getElementById("Clock63").innerHTML='<font color="' + ct[63].cl + '">' + ct[63].tz + ClockString(ct[63].ct) + '</font>';
-document.getElementById("Clock64").innerHTML='<font color="' + ct[64].cl + '">' + ct[64].tz + ClockString(ct[64].ct) + '</font>';
-document.getElementById("Clock65").innerHTML='<font color="' + ct[65].cl + '">' + ct[65].tz + ClockString(ct[65].ct) + '</font>';
-document.getElementById("Clock66").innerHTML='<font color="' + ct[66].cl + '">' + ct[66].tz + ClockString(ct[66].ct) + '</font>';
-document.getElementById("Clock67").innerHTML='<font color="' + ct[67].cl + '">' + ct[67].tz + ClockString(ct[67].ct) + '</font>';
-document.getElementById("Clock68").innerHTML='<font color="' + ct[68].cl + '">' + ct[68].tz + ClockString(ct[68].ct) + '</font>';
-document.getElementById("Clock69").innerHTML='<font color="' + ct[69].cl + '">' + ct[69].tz + ClockString(ct[69].ct) + '</font>';
-document.getElementById("Clock70").innerHTML='<font color="' + ct[70].cl + '">' + ct[70].tz + ClockString(ct[70].ct) + '</font>';
-document.getElementById("Clock71").innerHTML='<font color="' + ct[71].cl + '">' + ct[71].tz + ClockString(ct[71].ct) + '</font>';
-document.getElementById("Clock72").innerHTML='<font color="' + ct[72].cl + '">' + ct[72].tz + ClockString(ct[72].ct) + '</font>';
-document.getElementById("Clock73").innerHTML='<font color="' + ct[73].cl + '">' + ct[73].tz + ClockString(ct[73].ct) + '</font>';
-document.getElementById("Clock74").innerHTML='<font color="' + ct[74].cl + '">' + ct[74].tz + ClockString(ct[74].ct) + '</font>';
-document.getElementById("Clock75").innerHTML='<font color="' + ct[75].cl + '">' + ct[75].tz + ClockString(ct[75].ct) + '</font>';
-document.getElementById("Clock76").innerHTML='<font color="' + ct[76].cl + '">' + ct[76].tz + ClockString(ct[76].ct) + '</font>';
-document.getElementById("Clock77").innerHTML='<font color="' + ct[77].cl + '">' + ct[77].tz + ClockString(ct[77].ct) + '</font>';
-document.getElementById("Clock78").innerHTML='<font color="' + ct[78].cl + '">' + ct[78].tz + ClockString(ct[78].ct) + '</font>';
-document.getElementById("Clock79").innerHTML='<font color="' + ct[79].cl + '">' + ct[79].tz + ClockString(ct[79].ct) + '</font>';
-document.getElementById("Clock80").innerHTML='<font color="' + ct[80].cl + '">' + ct[80].tz + ClockString(ct[80].ct) + '</font>';
-document.getElementById("Clock81").innerHTML='<font color="' + ct[81].cl + '">' + ct[81].tz + ClockString(ct[81].ct) + '</font>';
-document.getElementById("Clock82").innerHTML='<font color="' + ct[82].cl + '">' + ct[82].tz + ClockString(ct[82].ct) + '</font>';
-document.getElementById("Clock83").innerHTML='<font color="' + ct[83].cl + '">' + ct[83].tz + ClockString(ct[83].ct) + '</font>';
-document.getElementById("Clock84").innerHTML='<font color="' + ct[84].cl + '">' + ct[84].tz + ClockString(ct[84].ct) + '</font>';
-document.getElementById("Clock85").innerHTML='<font color="' + ct[85].cl + '">' + ct[85].tz + ClockString(ct[85].ct) + '</font>';
-document.getElementById("Clock86").innerHTML='<font color="' + ct[86].cl + '">' + ct[86].tz + ClockString(ct[86].ct) + '</font>';
-document.getElementById("Clock87").innerHTML='<font color="' + ct[87].cl + '">' + ct[87].tz + ClockString(ct[87].ct) + '</font>';
-document.getElementById("Clock88").innerHTML='<font color="' + ct[88].cl + '">' + ct[88].tz + ClockString(ct[88].ct) + '</font>';
-document.getElementById("Clock89").innerHTML='<font color="' + ct[89].cl + '">' + ct[89].tz + ClockString(ct[89].ct) + '</font>';
-document.getElementById("Clock90").innerHTML='<font color="' + ct[90].cl + '">' + ct[90].tz + ClockString(ct[90].ct) + '</font>';
-document.getElementById("Clock91").innerHTML='<font color="' + ct[91].cl + '">' + ct[91].tz + ClockString(ct[91].ct) + '</font>';
-document.getElementById("Clock92").innerHTML='<font color="' + ct[92].cl + '">' + ct[92].tz + ClockString(ct[92].ct) + '</font>';
-document.getElementById("Clock93").innerHTML='<font color="' + ct[93].cl + '">' + ct[93].tz + ClockString(ct[93].ct) + '</font>';
-document.getElementById("Clock94").innerHTML='<font color="' + ct[94].cl + '">' + ct[94].tz + ClockString(ct[94].ct) + '</font>';
-document.getElementById("Clock95").innerHTML='<font color="' + ct[95].cl + '">' + ct[95].tz + ClockString(ct[95].ct) + '</font>';
-document.getElementById("Clock96").innerHTML='<font color="' + ct[96].cl + '">' + ct[96].tz + ClockString(ct[96].ct) + '</font>';
-document.getElementById("Clock97").innerHTML='<font color="' + ct[97].cl + '">' + ct[97].tz + ClockString(ct[97].ct) + '</font>';
-document.getElementById("Clock98").innerHTML='<font color="' + ct[98].cl + '">' + ct[98].tz + ClockString(ct[98].ct) + '</font>';
-document.getElementById("Clock99").innerHTML='<font color="' + ct[99].cl + '">' + ct[99].tz + ClockString(ct[99].ct) + '</font>';
-document.getElementById("Clock100").innerHTML='<font color="' + ct[100].cl + '">' + ct[100].tz + ClockString(ct[100].ct) + '</font>';
-document.getElementById("Clock101").innerHTML='<font color="' + ct[101].cl + '">' + ct[101].tz + ClockString(ct[101].ct) + '</font>';
-document.getElementById("Clock102").innerHTML='<font color="' + ct[102].cl + '">' + ct[102].tz + ClockString(ct[102].ct) + '</font>';
-document.getElementById("Clock103").innerHTML='<font color="' + ct[103].cl + '">' + ct[103].tz + ClockString(ct[103].ct) + '</font>';
-document.getElementById("Clock104").innerHTML='<font color="' + ct[104].cl + '">' + ct[104].tz + ClockString(ct[104].ct) + '</font>';
-document.getElementById("Clock105").innerHTML='<font color="' + ct[105].cl + '">' + ct[105].tz + ClockString(ct[105].ct) + '</font>';
-document.getElementById("Clock106").innerHTML='<font color="' + ct[106].cl + '">' + ct[106].tz + ClockString(ct[106].ct) + '</font>';
-document.getElementById("Clock107").innerHTML='<font color="' + ct[107].cl + '">' + ct[107].tz + ClockString(ct[107].ct) + '</font>';
-document.getElementById("Clock108").innerHTML='<font color="' + ct[108].cl + '">' + ct[108].tz + ClockString(ct[108].ct) + '</font>';
-document.getElementById("Clock109").innerHTML='<font color="' + ct[109].cl + '">' + ct[109].tz + ClockString(ct[109].ct) + '</font>';
-document.getElementById("Clock110").innerHTML='<font color="' + ct[110].cl + '">' + ct[110].tz + ClockString(ct[110].ct) + '</font>';
-document.getElementById("Clock111").innerHTML='<font color="' + ct[111].cl + '">' + ct[111].tz + ClockString(ct[111].ct) + '</font>';
-document.getElementById("Clock112").innerHTML='<font color="' + ct[112].cl + '">' + ct[112].tz + ClockString(ct[112].ct) + '</font>';
-document.getElementById("Clock113").innerHTML='<font color="' + ct[113].cl + '">' + ct[113].tz + ClockString(ct[113].ct) + '</font>';
-document.getElementById("Clock114").innerHTML='<font color="' + ct[114].cl + '">' + ct[114].tz + ClockString(ct[114].ct) + '</font>';
-document.getElementById("Clock115").innerHTML='<font color="' + ct[115].cl + '">' + ct[115].tz + ClockString(ct[115].ct) + '</font>';
-document.getElementById("Clock116").innerHTML='<font color="' + ct[116].cl + '">' + ct[116].tz + ClockString(ct[116].ct) + '</font>';
-document.getElementById("Clock117").innerHTML='<font color="' + ct[117].cl + '">' + ct[117].tz + ClockString(ct[117].ct) + '</font>';
-document.getElementById("Clock118").innerHTML='<font color="' + ct[118].cl + '">' + ct[118].tz + ClockString(ct[118].ct) + '</font>';
-document.getElementById("Clock119").innerHTML='<font color="' + ct[119].cl + '">' + ct[119].tz + ClockString(ct[119].ct) + '</font>';
-document.getElementById("Clock120").innerHTML='<font color="' + ct[120].cl + '">' + ct[120].tz + ClockString(ct[120].ct) + '</font>';
-document.getElementById("Clock121").innerHTML='<font color="' + ct[121].cl + '">' + ct[121].tz + ClockString(ct[121].ct) + '</font>';
-document.getElementById("Clock122").innerHTML='<font color="' + ct[122].cl + '">' + ct[122].tz + ClockString(ct[122].ct) + '</font>';
-document.getElementById("Clock123").innerHTML='<font color="' + ct[123].cl + '">' + ct[123].tz + ClockString(ct[123].ct) + '</font>';
-document.getElementById("Clock124").innerHTML='<font color="' + ct[124].cl + '">' + ct[124].tz + ClockString(ct[124].ct) + '</font>';
-document.getElementById("Clock125").innerHTML='<font color="' + ct[125].cl + '">' + ct[125].tz + ClockString(ct[125].ct) + '</font>';
-document.getElementById("Clock126").innerHTML='<font color="' + ct[126].cl + '">' + ct[126].tz + ClockString(ct[126].ct) + '</font>';
-document.getElementById("Clock127").innerHTML='<font color="' + ct[127].cl + '">' + ct[127].tz + ClockString(ct[127].ct) + '</font>';
-document.getElementById("Clock128").innerHTML='<font color="' + ct[128].cl + '">' + ct[128].tz + ClockString(ct[128].ct) + '</font>';
-document.getElementById("Clock129").innerHTML='<font color="' + ct[129].cl + '">' + ct[129].tz + ClockString(ct[129].ct) + '</font>';
-document.getElementById("Clock130").innerHTML='<font color="' + ct[130].cl + '">' + ct[130].tz + ClockString(ct[130].ct) + '</font>';
-document.getElementById("Clock131").innerHTML='<font color="' + ct[131].cl + '">' + ct[131].tz + ClockString(ct[131].ct) + '</font>';
-document.getElementById("Clock132").innerHTML='<font color="' + ct[132].cl + '">' + ct[132].tz + ClockString(ct[132].ct) + '</font>';
-document.getElementById("Clock133").innerHTML='<font color="' + ct[133].cl + '">' + ct[133].tz + ClockString(ct[133].ct) + '</font>';
-document.getElementById("Clock134").innerHTML='<font color="' + ct[134].cl + '">' + ct[134].tz + ClockString(ct[134].ct) + '</font>';
-document.getElementById("Clock135").innerHTML='<font color="' + ct[135].cl + '">' + ct[135].tz + ClockString(ct[135].ct) + '</font>';
-document.getElementById("Clock136").innerHTML='<font color="' + ct[136].cl + '">' + ct[136].tz + ClockString(ct[136].ct) + '</font>';
-document.getElementById("Clock137").innerHTML='<font color="' + ct[137].cl + '">' + ct[137].tz + ClockString(ct[137].ct) + '</font>';
-document.getElementById("Clock138").innerHTML='<font color="' + ct[138].cl + '">' + ct[138].tz + ClockString(ct[138].ct) + '</font>';
-document.getElementById("Clock139").innerHTML='<font color="' + ct[139].cl + '">' + ct[139].tz + ClockString(ct[139].ct) + '</font>';
-document.getElementById("Clock140").innerHTML='<font color="' + ct[140].cl + '">' + ct[140].tz + ClockString(ct[140].ct) + '</font>';
-document.getElementById("Clock141").innerHTML='<font color="' + ct[141].cl + '">' + ct[141].tz + ClockString(ct[141].ct) + '</font>';
-document.getElementById("Clock142").innerHTML='<font color="' + ct[142].cl + '">' + ct[142].tz + ClockString(ct[142].ct) + '</font>';
-document.getElementById("Clock143").innerHTML='<font color="' + ct[143].cl + '">' + ct[143].tz + ClockString(ct[143].ct) + '</font>';
-document.getElementById("Clock144").innerHTML='<font color="' + ct[144].cl + '">' + ct[144].tz + ClockString(ct[144].ct) + '</font>';
-document.getElementById("Clock145").innerHTML='<font color="' + ct[145].cl + '">' + ct[145].tz + ClockString(ct[145].ct) + '</font>';
-document.getElementById("Clock146").innerHTML='<font color="' + ct[146].cl + '">' + ct[146].tz + ClockString(ct[146].ct) + '</font>';
-document.getElementById("Clock147").innerHTML='<font color="' + ct[147].cl + '">' + ct[147].tz + ClockString(ct[147].ct) + '</font>';
-document.getElementById("Clock148").innerHTML='<font color="' + ct[148].cl + '">' + ct[148].tz + ClockString(ct[148].ct) + '</font>';
-document.getElementById("Clock149").innerHTML='<font color="' + ct[149].cl + '">' + ct[149].tz + ClockString(ct[149].ct) + '</font>';
-document.getElementById("IST").innerHTML='Reference Time: INDIAN STANDARD TIME   Delhi Mumbai Kolkata Chennai<br>Created by Chaitanya Tejaswi (chaitanyadpsg@gmail.com)';
-window.setTimeout("WorldTime()", 1001);
-}
-window.onload=WorldTime;
-function ClockString(day)
-{
-var date=day.getDate();
-if(date<10)
-date='0'+date;
-var month=day.getMonth()+1;
-if(month<10)
-month='0'+month;
-var year=day.getFullYear();
-var hour=day.getHours();
-if(hour<10)
-hour='0'+hour;
-var minute=day.getMinutes();
-if(minute<10)
-minute='0'+minute;
-var second=day.getSeconds();
-if(second<10)
-second='0'+second;
-day= date+'.'+month+'.'+year+' '+hour+':'+minute+':'+second;
-return day
-}
-</script>
-<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
-<meta http-equiv="Page-Exit" content="revealTrans(Duration=1.0,Transition=23)">
+    <title>World Time </title>
+    <noscript style="font-family: Trebuchet MS; font-size: 11pt; color: Yellow ;"> This Application Requires JavaScript Plug-in which has to be initialized or installed. It seems that your OS does not have the Plug-in Installed or has been disabled by you. Please Enable/Install the Plug-in. If you have the plug-in and is currently disabled, right-click on the light yellow bar above, Chose "Allow Blocked Content..." and then click "Yes" from the consecutive dialog box, you should see the Application running, or else install the plug-in from Internet/Reliable Disc.</noscript>
+    <style>
+    td {
+    border:1;
+    font-family:Footlight MT Light;
+    font-size:11pt;
+    background-color:Darkgreen;
+    color:Yellow;
+    text-align:center;
+    }
+    </style>
+    <script language="JavaScript">
+        function TimeZone(tz, os, ds, cl)
+        {
+        this.ct=new Date();
+        this.tz=tz;
+        this.os=os;
+        this.ds=ds;
+        this.cl=cl;
+        }
+        function WorldTime()
+        {
+        var ct = new Array(
+        new TimeZone('Afghanistan ', -1.5, 0, 'Yellow'),
+        new TimeZone('Albania ', -4.5, 0, 'Yellow'),
+        new TimeZone('Algeria ', -4.5, 0, 'Yellow'),
+        new TimeZone('Antilles ', -9.5, 0, 'Yellow'),
+        new TimeZone('Argentina ',  -8.5, 0, 'Yellow'),
+        new TimeZone('Australia1 ', +2.5, 0, 'Yellow'),
+        new TimeZone('Australia2 ', +4.5, 0, 'Yellow'),
+        new TimeZone('Austria ',-4.5, 0, 'Yellow'),
+        new TimeZone('Bahamas ', -10.5, 0, 'Yellow'),
+        new TimeZone('Bahrain ', -2.5, 0, 'Yellow'),
+        new TimeZone('Bangladesh ', +0.5, 0, 'Yellow'),
+        new TimeZone('Barbados ', -9.5, 0, 'Yellow'),
+        new TimeZone('Belgium ',  -4.5, 0, 'Yellow'),
+        new TimeZone('Belize ', -11.5, 0, 'Yellow'),
+        new TimeZone('Benin ', -4.5,0, 'Yellow'),
+        new TimeZone('Bermuda ', -9.5, 0, 'Yellow'),
+        new TimeZone('Bolivia ', -9.5, 0, 'Yellow'),
+        new TimeZone('Botswana ', -3.5, 0, 'Yellow'),
+        new TimeZone('Brazil ', -8.5, 0, 'Yellow'),
+        new TimeZone('Brunei ', +2.5, 0, 'Yellow'),
+        new TimeZone('Bulgaria ',  -2.5, 0, 'Yellow'),
+        new TimeZone('BurkinaFaso ', -5.5, 0, 'Yellow'),
+        new TimeZone('CAfricaRp. ', -4.0, 0, 'Yellow'),
+        new TimeZone('Cameroon ', -4.5, 0, 'Yellow'),
+        new TimeZone('Canada1 ', -9.0, 0, 'Yellow'),
+        new TimeZone('Canada2 ', +14.5, 0, 'Yellow'),
+        new TimeZone('Chad ', -4.5, 0, 'Yellow'),
+        new TimeZone('Chile ',  -9.5, 0, 'Yellow'),
+        new TimeZone('China ', +2.5, 0, 'Yellow'),
+        new TimeZone('Colombia ', -10.5, 0, 'Yellow'),
+        new TimeZone('Congo ', -4.5, 0, 'Yellow'),
+        new TimeZone('Costa Rica ', -11.5, 0, 'Yellow'),
+        new TimeZone('CoteDIvory ', -5.5, 0, 'Yellow'),
+        new TimeZone('Cuba ', -10.5, 0, 'Yellow'),
+        new TimeZone('Czech Rp. ', -4.5, 0, 'Yellow'),
+        new TimeZone('Denmark ', -4.5, 0, 'Yellow'),
+        new TimeZone('Deutschland ', -4.5, 0, 'Yellow'),
+        new TimeZone('Djibouti ',  -2.5, 0, 'Yellow'),
+        new TimeZone('Domini Is. ', -9.5, 0, 'Yellow'),
+        new TimeZone('Domini Rp. ', -9.5, 0, 'Yellow'),
+        new TimeZone('Egypt ', -3.5, 0, 'Yellow'),
+        new TimeZone('England ', -5.5, 0, 'Yellow'),
+        new TimeZone('Ecuador ', -10.5, 0, 'Yellow'),
+        new TimeZone('Ethiopia ', -2.5, 0, 'Yellow'),
+        new TimeZone('Fiji ', +6.5, 0, 'Yellow'),
+        new TimeZone('Finland ', -3.5, 0, 'Yellow'),
+        new TimeZone('France ',  -4.5, 0, 'Yellow'),
+        new TimeZone('Gambia ', -5.5, 0, 'Yellow'),
+        new TimeZone('Guatemala ', -11.5, 0, 'Yellow'),
+        new TimeZone('Ghana ',-5.5, 0, 'Yellow'),
+        new TimeZone('Gibraltar ', -4.5, 0, 'Yellow'),
+        new TimeZone('Granada ', -9.5, 0, 'Yellow'),
+        new TimeZone('Greece ', -3.5, 0, 'Yellow'),
+        new TimeZone('Guyana ',  -8.5, 0, 'Yellow'),
+        new TimeZone('Haiti ', -10.5, 0, 'Yellow'),
+        new TimeZone('Hawaii ', -16.0, 0, 'Yellow'),
+        new TimeZone('Honduras ', -11.5,0, 'Yellow'),
+        new TimeZone('Hong Kong ', +2.5, 0, 'Yellow'),
+        new TimeZone('Hungary ', -4.5, 0, 'Yellow'),
+        new TimeZone('Iceland ', -5.5, 0, 'Yellow'),
+        new TimeZone('India ', 0, 0, 'Yellow'),
+        new TimeZone('Indonesia1 ', +1.5, 0, 'Yellow'),
+        new TimeZone('Indonesia2 ', +3.5, 0, 'Yellow'),
+        new TimeZone('Iran ',  -2.0, 0, 'Yellow'),
+        new TimeZone('Iraq ', -2.5, 0, 'Yellow'),
+        new TimeZone('Ireland ', -5.5, 0, 'Yellow'),
+        new TimeZone('Italy ', -4.5, 0, 'Yellow'),
+        new TimeZone('Jamaica ', -10.5, 0, 'Yellow'),
+        new TimeZone('Japan ', +3.5, 0, 'Yellow'),
+        new TimeZone('Jordan ', -3.5, 0, 'Yellow'),
+        new TimeZone('Kenya ',  -2.5, 0, 'Yellow'),
+        new TimeZone('Korea (N/S) ', +3.5, 0, 'Yellow'),
+        new TimeZone('Kuwait ', -2.5, 0, 'Yellow'),
+        new TimeZone('Lebanon ',-3.5, 0, 'Yellow'),
+        new TimeZone('Liberia ', -5.5, 0, 'Yellow'),
+        new TimeZone('Libya ', -3.5, 0, 'Yellow'),
+        new TimeZone('Luxembourg ', -4.5, 0, 'Yellow'),
+        new TimeZone('Malawi ', -3.5, 0, 'Yellow'),
+        new TimeZone('Malaysia ',  +2.5, 0, 'Yellow'),
+        new TimeZone('Maldives ', -0.5, 0, 'Yellow'),
+        new TimeZone('Mali ', -5.5,0, 'Yellow'),
+        new TimeZone('Malta ', -4.5, 0, 'Yellow'),
+        new TimeZone('Marshall Is. ', +6.5, 0, 'Yellow'),
+        new TimeZone('Mexico ', -11.5, 0, 'Yellow'),
+        new TimeZone('Micronesia1 ', +3.5, 0, 'Yellow'),
+        new TimeZone('Micronesia2 ', +5.5, 0, 'Yellow'),
+        new TimeZone('Montserrat ',  -9.5, 0, 'Yellow'),
+        new TimeZone('Morocco ', -5.5, 0, 'Yellow'),
+        new TimeZone('Mozambique ', -3.5, 0, 'Yellow'),
+        new TimeZone('Myanmar ', +1.0, 0, 'Yellow'),
+        new TimeZone('Namibia ', -3.5, 0, 'Yellow'),
+        new TimeZone('Nauru ', +6.5, 0, 'Yellow'),
+        new TimeZone('Nepal ', 0, 0, 'Yellow'),
+        new TimeZone('Netherlands ', -4.5, 0, 'Yellow'),
+        new TimeZone('NewYork ', -10.5, 0, 'Yellow'),
+        new TimeZone('NewZealand ',  +6.5, 0, 'Yellow'),
+        new TimeZone('Nicaragua ', -11.5, 0, 'Yellow'),
+        new TimeZone('Niger ', -5.5, 0, 'Yellow'),
+        new TimeZone('Nigeria ', -4.5, 0, 'Yellow'),
+        new TimeZone('Norway ', -4.5, 0, 'Yellow'),
+        new TimeZone('Oman  ', -1.5, 0, 'Yellow'),
+        new TimeZone('Pakistan ', -0.5, 0, 'Yellow'),
+        new TimeZone('Panama ', -10.5, 0, 'Yellow'),
+        new TimeZone('PapuaGuinea ',  +4.5, 0, 'Yellow'),
+        new TimeZone('Paraguay ', -9.5, 0, 'Yellow'),
+        new TimeZone('Peru ', -10.5, 0, 'Yellow'),
+        new TimeZone('Phoenix ', -12.5, 0, 'Yellow'),
+        new TimeZone('Philippines ', +2.5, 0, 'Yellow'),
+        new TimeZone('Poland ', -4.5, 0, 'Yellow'),
+        new TimeZone('Porto Rica ', -9.5, 0, 'Yellow'),
+        new TimeZone('Portugal ', -5.5, 0, 'Yellow'),
+        new TimeZone('Qatar ', -2.5, 0, 'Yellow'),
+        new TimeZone('Romania ',  -3.5, 0, 'Yellow'),
+        new TimeZone('Russia1 ', -2.5, 0, 'Yellow'),
+        new TimeZone('Russia2 ', +5.5, 0, 'Yellow'),
+        new TimeZone('SanFrancisco ', -13.5, 0, 'Yellow'),
+        new TimeZone('SaudiArabia ',-2.5, 0, 'Yellow'),
+        new TimeZone('Senegal ', -5.5, 0, 'Yellow'),
+        new TimeZone('Seychelles ', -1.5, 0, 'Yellow'),
+        new TimeZone('Sierra Leone ', -5.5, 0, 'Yellow'),
+        new TimeZone('Singapore ', +2.5, 0, 'Yellow'),
+        new TimeZone('Somalia ',  -2.5, 0, 'Yellow'),
+        new TimeZone('Spain ', -4.5, 0, 'Yellow'),
+        new TimeZone('Sri Lanka ', 0,0, 'Yellow'),
+        new TimeZone('Sudan ', -3.5, 0, 'Yellow'),
+        new TimeZone('Suriname ', -8.5, 0, 'Yellow'),
+        new TimeZone('Swaziland ', -3.5, 0, 'Yellow'),
+        new TimeZone('Sweden ', -4.5, 0, 'Yellow'),
+        new TimeZone('Switzerland ',-4.5,0,'Yellow'),
+        new TimeZone('Syria ', -3.5, 0, 'Yellow'),
+        new TimeZone('Taiwan ',  +2.5, 0, 'Yellow'),
+        new TimeZone('Tanzania ', -2.5, 0, 'Yellow'),
+        new TimeZone('Texas ', -11.5, 0, 'Yellow'),
+        new TimeZone('Thailand ', +1.5, 0, 'Yellow'),
+        new TimeZone('Tonga ',+7.5, 0, 'Yellow'),
+        new TimeZone('Trinidad ', -9.5, 0, 'Yellow'),
+        new TimeZone('Tunisia ', -4.5, 0, 'Yellow'),
+        new TimeZone('Turkey ', -2.5, 0, 'Yellow'),
+        new TimeZone('UAEmirates ',  -1.5, 0, 'Yellow'),
+        new TimeZone('Uganda ', -2.5, 0, 'Yellow'),
+        new TimeZone('Uruguay ', -8.5,0, 'Yellow'),
+        new TimeZone('Vanuatu ', -5.5, 0, 'Yellow'),
+        new TimeZone('Vatican ', -4.5, 0, 'Yellow'),
+        new TimeZone('Venezuela ', -9.5, 0, 'Yellow'),
+        new TimeZone('Yemen ', -2.5, 0, 'Yellow'),
+        new TimeZone('Yemen Is. ', -10.5, 0, 'Yellow'),
+        new TimeZone('Yugoslavia ', -4.5, 0, 'Yellow'),
+        new TimeZone('Zaire ',  -4.5, 0, 'Yellow'),
+        new TimeZone('Zambia ', -3.5, 0, 'Yellow'),
+        new TimeZone('Zimbabwe ', -2.5, 0, 'Yellow'));
+        var day = new Date();
+        var DaylightSavingTimeOn = new Date(day.getFullYear(), 3, 1);
+        while (DaylightSavingTimeOn.getDay() != 0)
+        DaylightSavingTimeOn.setDate(DaylightSavingTimeOn.getDate() + 1);
+        var DaylightSavingTimeOff = new Date(day.getFullYear(), 9, 31);
+        while (DaylightSavingTimeOff.getDay() != 0)
+        DaylightSavingTimeOff.setDate(DaylightSavingTimeOff.getDate() - 1);
+        if (DaylightSavingTimeOn < day && day < DaylightSavingTimeOff)
+        DaylightSavingActive=1;
+        else
+        DaylightSavingActive=0;
+        for(n=0; n<ct.length; n++)
+        if (ct[n].ds == 1 && DaylightSavingActive == 1) ct[n].os++;
+        IndianStandardTime = new Date();
+        for (n=0; n<ct.length; n++)
+        ct[n].ct = new Date(IndianStandardTime.getTime() + ct[n].os * 3600 * 1000);
+        document.getElementById("Clock0").innerHTML='<font color="' + ct[0].cl + '">' + ct[0].tz + ClockString(ct[0].ct) + '</font>';
+        document.getElementById("Clock1").innerHTML='<font color="' + ct[1].cl + '">' + ct[1].tz + ClockString(ct[1].ct) + '</font>';
+        document.getElementById("Clock2").innerHTML='<font color="' + ct[2].cl + '">' + ct[2].tz + ClockString(ct[2].ct) + '</font>';
+        document.getElementById("Clock3").innerHTML='<font color="' + ct[3].cl + '">' + ct[3].tz + ClockString(ct[3].ct) + '</font>';
+        document.getElementById("Clock4").innerHTML='<font color="' + ct[4].cl + '">' + ct[4].tz + ClockString(ct[4].ct) + '</font>';
+        document.getElementById("Clock5").innerHTML='<font color="' + ct[5].cl + '">' + ct[5].tz + ClockString(ct[5].ct) + '</font>';
+        document.getElementById("Clock6").innerHTML='<font color="' + ct[6].cl + '">' + ct[6].tz + ClockString(ct[6].ct) + '</font>';
+        document.getElementById("Clock7").innerHTML='<font color="' + ct[7].cl + '">' + ct[7].tz + ClockString(ct[7].ct) + '</font>';
+        document.getElementById("Clock8").innerHTML='<font color="' + ct[8].cl + '">' + ct[8].tz + ClockString(ct[8].ct) + '</font>';
+        document.getElementById("Clock9").innerHTML='<font color="' + ct[9].cl + '">' + ct[9].tz + ClockString(ct[9].ct) + '</font>';
+        document.getElementById("Clock10").innerHTML='<font color="' + ct[10].cl + '">' + ct[10].tz + ClockString(ct[10].ct) + '</font>';
+        document.getElementById("Clock11").innerHTML='<font color="' + ct[11].cl + '">' + ct[11].tz + ClockString(ct[11].ct) + '</font>';
+        document.getElementById("Clock12").innerHTML='<font color="' + ct[12].cl + '">' + ct[12].tz + ClockString(ct[12].ct) + '</font>';
+        document.getElementById("Clock13").innerHTML='<font color="' + ct[13].cl + '">' + ct[13].tz + ClockString(ct[13].ct) + '</font>';
+        document.getElementById("Clock14").innerHTML='<font color="' + ct[14].cl + '">' + ct[14].tz + ClockString(ct[14].ct) + '</font>';
+        document.getElementById("Clock15").innerHTML='<font color="' + ct[15].cl + '">' + ct[15].tz + ClockString(ct[15].ct) + '</font>';
+        document.getElementById("Clock16").innerHTML='<font color="' + ct[16].cl + '">' + ct[16].tz + ClockString(ct[16].ct) + '</font>';
+        document.getElementById("Clock17").innerHTML='<font color="' + ct[17].cl + '">' + ct[17].tz + ClockString(ct[17].ct) + '</font>';
+        document.getElementById("Clock18").innerHTML='<font color="' + ct[18].cl + '">' + ct[18].tz + ClockString(ct[18].ct) + '</font>';
+        document.getElementById("Clock19").innerHTML='<font color="' + ct[19].cl + '">' + ct[19].tz + ClockString(ct[19].ct) + '</font>';
+        document.getElementById("Clock20").innerHTML='<font color="' + ct[20].cl + '">' + ct[20].tz + ClockString(ct[20].ct) + '</font>';
+        document.getElementById("Clock21").innerHTML='<font color="' + ct[21].cl + '">' + ct[21].tz + ClockString(ct[21].ct) + '</font>';
+        document.getElementById("Clock22").innerHTML='<font color="' + ct[22].cl + '">' + ct[22].tz + ClockString(ct[22].ct) + '</font>';
+        document.getElementById("Clock23").innerHTML='<font color="' + ct[23].cl + '">' + ct[23].tz + ClockString(ct[23].ct) + '</font>';
+        document.getElementById("Clock24").innerHTML='<font color="' + ct[24].cl + '">' + ct[24].tz + ClockString(ct[24].ct) + '</font>';
+        document.getElementById("Clock25").innerHTML='<font color="' + ct[25].cl + '">' + ct[25].tz + ClockString(ct[25].ct) + '</font>';
+        document.getElementById("Clock26").innerHTML='<font color="' + ct[26].cl + '">' + ct[26].tz + ClockString(ct[26].ct) + '</font>';
+        document.getElementById("Clock27").innerHTML='<font color="' + ct[27].cl + '">' + ct[27].tz + ClockString(ct[27].ct) + '</font>';
+        document.getElementById("Clock28").innerHTML='<font color="' + ct[28].cl + '">' + ct[28].tz + ClockString(ct[28].ct) + '</font>';
+        document.getElementById("Clock29").innerHTML='<font color="' + ct[29].cl + '">' + ct[29].tz + ClockString(ct[29].ct) + '</font>';
+        document.getElementById("Clock30").innerHTML='<font color="' + ct[30].cl + '">' + ct[30].tz + ClockString(ct[30].ct) + '</font>';
+        document.getElementById("Clock31").innerHTML='<font color="' + ct[31].cl + '">' + ct[31].tz + ClockString(ct[31].ct) + '</font>';
+        document.getElementById("Clock32").innerHTML='<font color="' + ct[32].cl + '">' + ct[32].tz + ClockString(ct[32].ct) + '</font>';
+        document.getElementById("Clock33").innerHTML='<font color="' + ct[33].cl + '">' + ct[33].tz + ClockString(ct[33].ct) + '</font>';
+        document.getElementById("Clock34").innerHTML='<font color="' + ct[34].cl + '">' + ct[34].tz + ClockString(ct[34].ct) + '</font>';
+        document.getElementById("Clock35").innerHTML='<font color="' + ct[35].cl + '">' + ct[35].tz + ClockString(ct[35].ct) + '</font>';
+        document.getElementById("Clock36").innerHTML='<font color="' + ct[36].cl + '">' + ct[36].tz + ClockString(ct[36].ct) + '</font>';
+        document.getElementById("Clock37").innerHTML='<font color="' + ct[37].cl + '">' + ct[37].tz + ClockString(ct[37].ct) + '</font>';
+        document.getElementById("Clock38").innerHTML='<font color="' + ct[38].cl + '">' + ct[38].tz + ClockString(ct[38].ct) + '</font>';
+        document.getElementById("Clock39").innerHTML='<font color="' + ct[39].cl + '">' + ct[39].tz + ClockString(ct[39].ct) + '</font>';
+        document.getElementById("Clock40").innerHTML='<font color="' + ct[40].cl + '">' + ct[40].tz + ClockString(ct[40].ct) + '</font>';
+        document.getElementById("Clock41").innerHTML='<font color="' + ct[41].cl + '">' + ct[41].tz + ClockString(ct[41].ct) + '</font>';
+        document.getElementById("Clock42").innerHTML='<font color="' + ct[42].cl + '">' + ct[42].tz + ClockString(ct[42].ct) + '</font>';
+        document.getElementById("Clock43").innerHTML='<font color="' + ct[43].cl + '">' + ct[43].tz + ClockString(ct[43].ct) + '</font>';
+        document.getElementById("Clock44").innerHTML='<font color="' + ct[44].cl + '">' + ct[44].tz + ClockString(ct[44].ct) + '</font>';
+        document.getElementById("Clock45").innerHTML='<font color="' + ct[45].cl + '">' + ct[45].tz + ClockString(ct[45].ct) + '</font>';
+        document.getElementById("Clock46").innerHTML='<font color="' + ct[46].cl + '">' + ct[46].tz + ClockString(ct[46].ct) + '</font>';
+        document.getElementById("Clock47").innerHTML='<font color="' + ct[47].cl + '">' + ct[47].tz + ClockString(ct[47].ct) + '</font>';
+        document.getElementById("Clock48").innerHTML='<font color="' + ct[48].cl + '">' + ct[48].tz + ClockString(ct[48].ct) + '</font>';
+        document.getElementById("Clock49").innerHTML='<font color="' + ct[49].cl + '">' + ct[49].tz + ClockString(ct[49].ct) + '</font>';
+        document.getElementById("Clock50").innerHTML='<font color="' + ct[50].cl + '">' + ct[50].tz + ClockString(ct[50].ct) + '</font>';
+        document.getElementById("Clock51").innerHTML='<font color="' + ct[51].cl + '">' + ct[51].tz + ClockString(ct[51].ct) + '</font>';
+        document.getElementById("Clock52").innerHTML='<font color="' + ct[52].cl + '">' + ct[52].tz + ClockString(ct[52].ct) + '</font>';
+        document.getElementById("Clock53").innerHTML='<font color="' + ct[53].cl + '">' + ct[53].tz + ClockString(ct[53].ct) + '</font>';
+        document.getElementById("Clock54").innerHTML='<font color="' + ct[54].cl + '">' + ct[54].tz + ClockString(ct[54].ct) + '</font>';
+        document.getElementById("Clock55").innerHTML='<font color="' + ct[55].cl + '">' + ct[55].tz + ClockString(ct[55].ct) + '</font>';
+        document.getElementById("Clock56").innerHTML='<font color="' + ct[56].cl + '">' + ct[56].tz + ClockString(ct[56].ct) + '</font>';
+        document.getElementById("Clock57").innerHTML='<font color="' + ct[57].cl + '">' + ct[57].tz + ClockString(ct[57].ct) + '</font>';
+        document.getElementById("Clock58").innerHTML='<font color="' + ct[58].cl + '">' + ct[58].tz + ClockString(ct[58].ct) + '</font>';
+        document.getElementById("Clock59").innerHTML='<font color="' + ct[59].cl + '">' + ct[59].tz + ClockString(ct[59].ct) + '</font>';
+        document.getElementById("Clock60").innerHTML='<font color="' + ct[60].cl + '">' + ct[60].tz + ClockString(ct[60].ct) + '</font>';
+        document.getElementById("Clock61").innerHTML='<font color="' + ct[61].cl + '">' + ct[61].tz + ClockString(ct[61].ct) + '</font>';
+        document.getElementById("Clock62").innerHTML='<font color="' + ct[62].cl + '">' + ct[62].tz + ClockString(ct[62].ct) + '</font>';
+        document.getElementById("Clock63").innerHTML='<font color="' + ct[63].cl + '">' + ct[63].tz + ClockString(ct[63].ct) + '</font>';
+        document.getElementById("Clock64").innerHTML='<font color="' + ct[64].cl + '">' + ct[64].tz + ClockString(ct[64].ct) + '</font>';
+        document.getElementById("Clock65").innerHTML='<font color="' + ct[65].cl + '">' + ct[65].tz + ClockString(ct[65].ct) + '</font>';
+        document.getElementById("Clock66").innerHTML='<font color="' + ct[66].cl + '">' + ct[66].tz + ClockString(ct[66].ct) + '</font>';
+        document.getElementById("Clock67").innerHTML='<font color="' + ct[67].cl + '">' + ct[67].tz + ClockString(ct[67].ct) + '</font>';
+        document.getElementById("Clock68").innerHTML='<font color="' + ct[68].cl + '">' + ct[68].tz + ClockString(ct[68].ct) + '</font>';
+        document.getElementById("Clock69").innerHTML='<font color="' + ct[69].cl + '">' + ct[69].tz + ClockString(ct[69].ct) + '</font>';
+        document.getElementById("Clock70").innerHTML='<font color="' + ct[70].cl + '">' + ct[70].tz + ClockString(ct[70].ct) + '</font>';
+        document.getElementById("Clock71").innerHTML='<font color="' + ct[71].cl + '">' + ct[71].tz + ClockString(ct[71].ct) + '</font>';
+        document.getElementById("Clock72").innerHTML='<font color="' + ct[72].cl + '">' + ct[72].tz + ClockString(ct[72].ct) + '</font>';
+        document.getElementById("Clock73").innerHTML='<font color="' + ct[73].cl + '">' + ct[73].tz + ClockString(ct[73].ct) + '</font>';
+        document.getElementById("Clock74").innerHTML='<font color="' + ct[74].cl + '">' + ct[74].tz + ClockString(ct[74].ct) + '</font>';
+        document.getElementById("Clock75").innerHTML='<font color="' + ct[75].cl + '">' + ct[75].tz + ClockString(ct[75].ct) + '</font>';
+        document.getElementById("Clock76").innerHTML='<font color="' + ct[76].cl + '">' + ct[76].tz + ClockString(ct[76].ct) + '</font>';
+        document.getElementById("Clock77").innerHTML='<font color="' + ct[77].cl + '">' + ct[77].tz + ClockString(ct[77].ct) + '</font>';
+        document.getElementById("Clock78").innerHTML='<font color="' + ct[78].cl + '">' + ct[78].tz + ClockString(ct[78].ct) + '</font>';
+        document.getElementById("Clock79").innerHTML='<font color="' + ct[79].cl + '">' + ct[79].tz + ClockString(ct[79].ct) + '</font>';
+        document.getElementById("Clock80").innerHTML='<font color="' + ct[80].cl + '">' + ct[80].tz + ClockString(ct[80].ct) + '</font>';
+        document.getElementById("Clock81").innerHTML='<font color="' + ct[81].cl + '">' + ct[81].tz + ClockString(ct[81].ct) + '</font>';
+        document.getElementById("Clock82").innerHTML='<font color="' + ct[82].cl + '">' + ct[82].tz + ClockString(ct[82].ct) + '</font>';
+        document.getElementById("Clock83").innerHTML='<font color="' + ct[83].cl + '">' + ct[83].tz + ClockString(ct[83].ct) + '</font>';
+        document.getElementById("Clock84").innerHTML='<font color="' + ct[84].cl + '">' + ct[84].tz + ClockString(ct[84].ct) + '</font>';
+        document.getElementById("Clock85").innerHTML='<font color="' + ct[85].cl + '">' + ct[85].tz + ClockString(ct[85].ct) + '</font>';
+        document.getElementById("Clock86").innerHTML='<font color="' + ct[86].cl + '">' + ct[86].tz + ClockString(ct[86].ct) + '</font>';
+        document.getElementById("Clock87").innerHTML='<font color="' + ct[87].cl + '">' + ct[87].tz + ClockString(ct[87].ct) + '</font>';
+        document.getElementById("Clock88").innerHTML='<font color="' + ct[88].cl + '">' + ct[88].tz + ClockString(ct[88].ct) + '</font>';
+        document.getElementById("Clock89").innerHTML='<font color="' + ct[89].cl + '">' + ct[89].tz + ClockString(ct[89].ct) + '</font>';
+        document.getElementById("Clock90").innerHTML='<font color="' + ct[90].cl + '">' + ct[90].tz + ClockString(ct[90].ct) + '</font>';
+        document.getElementById("Clock91").innerHTML='<font color="' + ct[91].cl + '">' + ct[91].tz + ClockString(ct[91].ct) + '</font>';
+        document.getElementById("Clock92").innerHTML='<font color="' + ct[92].cl + '">' + ct[92].tz + ClockString(ct[92].ct) + '</font>';
+        document.getElementById("Clock93").innerHTML='<font color="' + ct[93].cl + '">' + ct[93].tz + ClockString(ct[93].ct) + '</font>';
+        document.getElementById("Clock94").innerHTML='<font color="' + ct[94].cl + '">' + ct[94].tz + ClockString(ct[94].ct) + '</font>';
+        document.getElementById("Clock95").innerHTML='<font color="' + ct[95].cl + '">' + ct[95].tz + ClockString(ct[95].ct) + '</font>';
+        document.getElementById("Clock96").innerHTML='<font color="' + ct[96].cl + '">' + ct[96].tz + ClockString(ct[96].ct) + '</font>';
+        document.getElementById("Clock97").innerHTML='<font color="' + ct[97].cl + '">' + ct[97].tz + ClockString(ct[97].ct) + '</font>';
+        document.getElementById("Clock98").innerHTML='<font color="' + ct[98].cl + '">' + ct[98].tz + ClockString(ct[98].ct) + '</font>';
+        document.getElementById("Clock99").innerHTML='<font color="' + ct[99].cl + '">' + ct[99].tz + ClockString(ct[99].ct) + '</font>';
+        document.getElementById("Clock100").innerHTML='<font color="' + ct[100].cl + '">' + ct[100].tz + ClockString(ct[100].ct) + '</font>';
+        document.getElementById("Clock101").innerHTML='<font color="' + ct[101].cl + '">' + ct[101].tz + ClockString(ct[101].ct) + '</font>';
+        document.getElementById("Clock102").innerHTML='<font color="' + ct[102].cl + '">' + ct[102].tz + ClockString(ct[102].ct) + '</font>';
+        document.getElementById("Clock103").innerHTML='<font color="' + ct[103].cl + '">' + ct[103].tz + ClockString(ct[103].ct) + '</font>';
+        document.getElementById("Clock104").innerHTML='<font color="' + ct[104].cl + '">' + ct[104].tz + ClockString(ct[104].ct) + '</font>';
+        document.getElementById("Clock105").innerHTML='<font color="' + ct[105].cl + '">' + ct[105].tz + ClockString(ct[105].ct) + '</font>';
+        document.getElementById("Clock106").innerHTML='<font color="' + ct[106].cl + '">' + ct[106].tz + ClockString(ct[106].ct) + '</font>';
+        document.getElementById("Clock107").innerHTML='<font color="' + ct[107].cl + '">' + ct[107].tz + ClockString(ct[107].ct) + '</font>';
+        document.getElementById("Clock108").innerHTML='<font color="' + ct[108].cl + '">' + ct[108].tz + ClockString(ct[108].ct) + '</font>';
+        document.getElementById("Clock109").innerHTML='<font color="' + ct[109].cl + '">' + ct[109].tz + ClockString(ct[109].ct) + '</font>';
+        document.getElementById("Clock110").innerHTML='<font color="' + ct[110].cl + '">' + ct[110].tz + ClockString(ct[110].ct) + '</font>';
+        document.getElementById("Clock111").innerHTML='<font color="' + ct[111].cl + '">' + ct[111].tz + ClockString(ct[111].ct) + '</font>';
+        document.getElementById("Clock112").innerHTML='<font color="' + ct[112].cl + '">' + ct[112].tz + ClockString(ct[112].ct) + '</font>';
+        document.getElementById("Clock113").innerHTML='<font color="' + ct[113].cl + '">' + ct[113].tz + ClockString(ct[113].ct) + '</font>';
+        document.getElementById("Clock114").innerHTML='<font color="' + ct[114].cl + '">' + ct[114].tz + ClockString(ct[114].ct) + '</font>';
+        document.getElementById("Clock115").innerHTML='<font color="' + ct[115].cl + '">' + ct[115].tz + ClockString(ct[115].ct) + '</font>';
+        document.getElementById("Clock116").innerHTML='<font color="' + ct[116].cl + '">' + ct[116].tz + ClockString(ct[116].ct) + '</font>';
+        document.getElementById("Clock117").innerHTML='<font color="' + ct[117].cl + '">' + ct[117].tz + ClockString(ct[117].ct) + '</font>';
+        document.getElementById("Clock118").innerHTML='<font color="' + ct[118].cl + '">' + ct[118].tz + ClockString(ct[118].ct) + '</font>';
+        document.getElementById("Clock119").innerHTML='<font color="' + ct[119].cl + '">' + ct[119].tz + ClockString(ct[119].ct) + '</font>';
+        document.getElementById("Clock120").innerHTML='<font color="' + ct[120].cl + '">' + ct[120].tz + ClockString(ct[120].ct) + '</font>';
+        document.getElementById("Clock121").innerHTML='<font color="' + ct[121].cl + '">' + ct[121].tz + ClockString(ct[121].ct) + '</font>';
+        document.getElementById("Clock122").innerHTML='<font color="' + ct[122].cl + '">' + ct[122].tz + ClockString(ct[122].ct) + '</font>';
+        document.getElementById("Clock123").innerHTML='<font color="' + ct[123].cl + '">' + ct[123].tz + ClockString(ct[123].ct) + '</font>';
+        document.getElementById("Clock124").innerHTML='<font color="' + ct[124].cl + '">' + ct[124].tz + ClockString(ct[124].ct) + '</font>';
+        document.getElementById("Clock125").innerHTML='<font color="' + ct[125].cl + '">' + ct[125].tz + ClockString(ct[125].ct) + '</font>';
+        document.getElementById("Clock126").innerHTML='<font color="' + ct[126].cl + '">' + ct[126].tz + ClockString(ct[126].ct) + '</font>';
+        document.getElementById("Clock127").innerHTML='<font color="' + ct[127].cl + '">' + ct[127].tz + ClockString(ct[127].ct) + '</font>';
+        document.getElementById("Clock128").innerHTML='<font color="' + ct[128].cl + '">' + ct[128].tz + ClockString(ct[128].ct) + '</font>';
+        document.getElementById("Clock129").innerHTML='<font color="' + ct[129].cl + '">' + ct[129].tz + ClockString(ct[129].ct) + '</font>';
+        document.getElementById("Clock130").innerHTML='<font color="' + ct[130].cl + '">' + ct[130].tz + ClockString(ct[130].ct) + '</font>';
+        document.getElementById("Clock131").innerHTML='<font color="' + ct[131].cl + '">' + ct[131].tz + ClockString(ct[131].ct) + '</font>';
+        document.getElementById("Clock132").innerHTML='<font color="' + ct[132].cl + '">' + ct[132].tz + ClockString(ct[132].ct) + '</font>';
+        document.getElementById("Clock133").innerHTML='<font color="' + ct[133].cl + '">' + ct[133].tz + ClockString(ct[133].ct) + '</font>';
+        document.getElementById("Clock134").innerHTML='<font color="' + ct[134].cl + '">' + ct[134].tz + ClockString(ct[134].ct) + '</font>';
+        document.getElementById("Clock135").innerHTML='<font color="' + ct[135].cl + '">' + ct[135].tz + ClockString(ct[135].ct) + '</font>';
+        document.getElementById("Clock136").innerHTML='<font color="' + ct[136].cl + '">' + ct[136].tz + ClockString(ct[136].ct) + '</font>';
+        document.getElementById("Clock137").innerHTML='<font color="' + ct[137].cl + '">' + ct[137].tz + ClockString(ct[137].ct) + '</font>';
+        document.getElementById("Clock138").innerHTML='<font color="' + ct[138].cl + '">' + ct[138].tz + ClockString(ct[138].ct) + '</font>';
+        document.getElementById("Clock139").innerHTML='<font color="' + ct[139].cl + '">' + ct[139].tz + ClockString(ct[139].ct) + '</font>';
+        document.getElementById("Clock140").innerHTML='<font color="' + ct[140].cl + '">' + ct[140].tz + ClockString(ct[140].ct) + '</font>';
+        document.getElementById("Clock141").innerHTML='<font color="' + ct[141].cl + '">' + ct[141].tz + ClockString(ct[141].ct) + '</font>';
+        document.getElementById("Clock142").innerHTML='<font color="' + ct[142].cl + '">' + ct[142].tz + ClockString(ct[142].ct) + '</font>';
+        document.getElementById("Clock143").innerHTML='<font color="' + ct[143].cl + '">' + ct[143].tz + ClockString(ct[143].ct) + '</font>';
+        document.getElementById("Clock144").innerHTML='<font color="' + ct[144].cl + '">' + ct[144].tz + ClockString(ct[144].ct) + '</font>';
+        document.getElementById("Clock145").innerHTML='<font color="' + ct[145].cl + '">' + ct[145].tz + ClockString(ct[145].ct) + '</font>';
+        document.getElementById("Clock146").innerHTML='<font color="' + ct[146].cl + '">' + ct[146].tz + ClockString(ct[146].ct) + '</font>';
+        document.getElementById("Clock147").innerHTML='<font color="' + ct[147].cl + '">' + ct[147].tz + ClockString(ct[147].ct) + '</font>';
+        document.getElementById("Clock148").innerHTML='<font color="' + ct[148].cl + '">' + ct[148].tz + ClockString(ct[148].ct) + '</font>';
+        document.getElementById("Clock149").innerHTML='<font color="' + ct[149].cl + '">' + ct[149].tz + ClockString(ct[149].ct) + '</font>';
+        document.getElementById("IST").innerHTML='Reference Time: INDIAN STANDARD TIME   Delhi Mumbai Kolkata Chennai<br>Created by Chaitanya Tejaswi (chaitanyadpsg@gmail.com)';
+        window.setTimeout("WorldTime()", 1001);
+        }
+        window.onload=WorldTime;
+        function ClockString(day)
+        {
+        var date=day.getDate();
+        if(date<10)
+        date='0'+date;
+        var month=day.getMonth()+1;
+        if(month<10)
+        month='0'+month;
+        var year=day.getFullYear();
+        var hour=day.getHours();
+        if(hour<10)
+        hour='0'+hour;
+        var minute=day.getMinutes();
+        if(minute<10)
+        minute='0'+minute;
+        var second=day.getSeconds();
+        if(second<10)
+        second='0'+second;
+        day= date+'.'+month+'.'+year+' '+hour+':'+minute+':'+second;
+        return day
+        }
+        </script>
+        <meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+        <meta http-equiv="Page-Exit" content="revealTrans(Duration=1.0,Transition=23)">
 </head>
 <body  bgcolor="Peachpuff" oncontextmenu="return false" onselectstart="return false" oncopy="return false" ondragstart="return false" onfocus="return false" onblur="return false"onhelp="return false">
-<table>
-<tr>
-<td id="Clock0"></td>
-<td id="Clock1"></td>
-<td id="Clock2"></td>
-<td id="Clock3"></td>
-<td id="Clock4"></td>
-<td id="Clock5"></td>
-<td id="Clock6"></td>
-<td id="Clock7"></td>
-<td id="Clock8"></td>
-<td id="Clock9"></td>
-<td id="Clock10"></td>
-<td id="Clock11"></td>
-</tr>
-<tr>
-<td id="Clock12"></td>
-<td id="Clock13"></td>
-<td id="Clock14"></td>
-<td id="Clock15"></td>
-<td id="Clock16"></td>
-<td id="Clock17"></td>
-<td id="Clock18"></td>
-<td id="Clock19"></td>
-<td id="Clock20"></td>
-<td id="Clock21"></td>
-<td id="Clock22"></td>
-<td id="Clock23"></td>
-</tr>
-<tr>
-<td id="Clock24"></td>
-<td id="Clock25"></td>
-<td id="Clock26"></td>
-<td id="Clock27"></td>
-<td id="Clock28"></td>
-<td id="Clock29"></td>
-<td id="Clock30"></td>
-<td id="Clock31"></td>
-<td id="Clock32"></td>
-<td id="Clock33"></td>
-<td id="Clock34"></td>
-<td id="Clock35"></td>
-</tr>
-<tr>
-<td id="Clock36"></td>
-<td id="Clock37"></td>
-<td id="Clock38"></td>
-<td id="Clock39"></td>
-<td id="Clock40"></td>
-<td id="Clock41"></td>
-<td id="Clock42"></td>
-<td id="Clock43"></td>
-<td id="Clock44"></td>
-<td id="Clock45"></td>
-<td id="Clock46"></td>
-<td id="Clock47"></td>
-</tr>
-<tr>
-<td id="Clock48"></td>
-<td id="Clock49"></td>
-<td id="Clock50"></td>
-<td id="Clock51"></td>
-<td id="Clock52"></td>
-<td id="Clock53"></td>
-<td id="Clock54"></td>
-<td id="Clock55"></td>
-<td id="Clock56"></td>
-<td id="Clock57"></td>
-<td id="Clock58"></td>
-<td id="Clock59"></td>
-</tr>
-<tr>
-<td id="Clock60"></td>
-<td id="Clock61"></td>
-<td id="Clock62"></td>
-<td id="Clock63"></td>
-<td id="Clock64"></td>
-<td id="Clock65"></td>
-<td id="Clock66"></td>
-<td id="Clock67"></td>
-<td id="Clock68"></td>
-<td id="Clock69"></td>
-<td id="Clock70"></td>
-<td id="Clock71"></td>
-</tr>
-<tr>
-<td id="Clock72"></td>
-<td id="Clock73"></td>
-<td id="Clock74"></td>
-<td id="Clock75"></td>
-<td id="Clock76"></td>
-<td id="Clock77"></td>
-<td id="Clock78"></td>
-<td id="Clock79"></td>
-<td id="Clock80"></td>
-<td id="Clock81"></td>
-<td id="Clock82"></td>
-<td id="Clock83"></td>
-</tr>
-<tr>
-<td id="Clock84"></td>
-<td id="Clock85"></td>
-<td id="Clock86"></td>
-<td id="Clock87"></td>
-<td id="Clock88"></td>
-<td id="Clock89"></td>
-<td id="Clock90"></td>
-<td id="Clock91"></td>
-<td id="Clock92"></td>
-<td id="Clock93"></td>
-<td id="Clock94"></td>
-<td id="Clock95"></td>
-</tr>
-<tr>
-<td id="Clock96"></td>
-<td id="Clock97"></td>
-<td id="Clock98"></td>
-<td id="Clock99"></td>
-<td id="Clock100"></td>
-<td id="Clock101"></td>
-<td id="Clock102"></td>
-<td id="Clock103"></td>
-<td id="Clock104"></td>
-<td id="Clock105"></td>
-<td id="Clock106"></td>
-<td id="Clock107"></td>
-</tr>
-<tr>
-<td id="Clock108"></td>
-<td id="Clock109"></td>
-<td id="Clock110"></td>
-<td id="Clock111"></td>
-<td id="Clock112"></td>
-<td id="Clock113"></td>
-<td id="Clock114"></td>
-<td id="Clock115"></td>
-<td id="Clock116"></td>
-<td id="Clock117"></td>
-<td id="Clock118"></td>
-<td id="Clock119"></td>
-</tr>
-<tr>
-<td id="Clock120"></td>
-<td id="Clock121"></td>
-<td id="Clock122"></td>
-<td id="Clock123"></td>
-<td id="Clock124"></td>
-<td id="Clock125"></td>
-<td id="Clock126"></td>
-<td id="Clock127"></td>
-<td id="Clock128"></td>
-<td id="Clock129"></td>
-<td id="Clock130"></td>
-<td id="Clock131"></td>
-</tr>
-<tr>
-<td id="Clock132"></td>
-<td id="Clock133"></td>
-<td id="Clock134"></td>
-<td id="Clock135"></td>
-<td id="Clock136"></td>
-<td id="Clock137"></td>
-<td id="Clock138"></td>
-<td id="Clock139"></td>
-<td id="Clock140"></td>
-<td id="Clock141"></td>
-<td id="Clock142"></td>
-<td id="Clock143"></td>
-</tr>
-<tr>
-<td id="Clock144"></td>
-<td id="Clock145"></td>
-<td id="Clock146"></td>
-<td id="Clock147"></td>
-<td id="Clock148"></td>
-<td id="Clock149"></td>
-<td colspan=6 id="IST"></td>
-</tr>
-</table>
+    <table>
+        <tr>
+        <td id="Clock0"></td>
+        <td id="Clock1"></td>
+        <td id="Clock2"></td>
+        <td id="Clock3"></td>
+        <td id="Clock4"></td>
+        <td id="Clock5"></td>
+        <td id="Clock6"></td>
+        <td id="Clock7"></td>
+        <td id="Clock8"></td>
+        <td id="Clock9"></td>
+        <td id="Clock10"></td>
+        <td id="Clock11"></td>
+        </tr>
+        <tr>
+        <td id="Clock12"></td>
+        <td id="Clock13"></td>
+        <td id="Clock14"></td>
+        <td id="Clock15"></td>
+        <td id="Clock16"></td>
+        <td id="Clock17"></td>
+        <td id="Clock18"></td>
+        <td id="Clock19"></td>
+        <td id="Clock20"></td>
+        <td id="Clock21"></td>
+        <td id="Clock22"></td>
+        <td id="Clock23"></td>
+        </tr>
+        <tr>
+        <td id="Clock24"></td>
+        <td id="Clock25"></td>
+        <td id="Clock26"></td>
+        <td id="Clock27"></td>
+        <td id="Clock28"></td>
+        <td id="Clock29"></td>
+        <td id="Clock30"></td>
+        <td id="Clock31"></td>
+        <td id="Clock32"></td>
+        <td id="Clock33"></td>
+        <td id="Clock34"></td>
+        <td id="Clock35"></td>
+        </tr>
+        <tr>
+        <td id="Clock36"></td>
+        <td id="Clock37"></td>
+        <td id="Clock38"></td>
+        <td id="Clock39"></td>
+        <td id="Clock40"></td>
+        <td id="Clock41"></td>
+        <td id="Clock42"></td>
+        <td id="Clock43"></td>
+        <td id="Clock44"></td>
+        <td id="Clock45"></td>
+        <td id="Clock46"></td>
+        <td id="Clock47"></td>
+        </tr>
+        <tr>
+        <td id="Clock48"></td>
+        <td id="Clock49"></td>
+        <td id="Clock50"></td>
+        <td id="Clock51"></td>
+        <td id="Clock52"></td>
+        <td id="Clock53"></td>
+        <td id="Clock54"></td>
+        <td id="Clock55"></td>
+        <td id="Clock56"></td>
+        <td id="Clock57"></td>
+        <td id="Clock58"></td>
+        <td id="Clock59"></td>
+        </tr>
+        <tr>
+        <td id="Clock60"></td>
+        <td id="Clock61"></td>
+        <td id="Clock62"></td>
+        <td id="Clock63"></td>
+        <td id="Clock64"></td>
+        <td id="Clock65"></td>
+        <td id="Clock66"></td>
+        <td id="Clock67"></td>
+        <td id="Clock68"></td>
+        <td id="Clock69"></td>
+        <td id="Clock70"></td>
+        <td id="Clock71"></td>
+        </tr>
+        <tr>
+        <td id="Clock72"></td>
+        <td id="Clock73"></td>
+        <td id="Clock74"></td>
+        <td id="Clock75"></td>
+        <td id="Clock76"></td>
+        <td id="Clock77"></td>
+        <td id="Clock78"></td>
+        <td id="Clock79"></td>
+        <td id="Clock80"></td>
+        <td id="Clock81"></td>
+        <td id="Clock82"></td>
+        <td id="Clock83"></td>
+        </tr>
+        <tr>
+        <td id="Clock84"></td>
+        <td id="Clock85"></td>
+        <td id="Clock86"></td>
+        <td id="Clock87"></td>
+        <td id="Clock88"></td>
+        <td id="Clock89"></td>
+        <td id="Clock90"></td>
+        <td id="Clock91"></td>
+        <td id="Clock92"></td>
+        <td id="Clock93"></td>
+        <td id="Clock94"></td>
+        <td id="Clock95"></td>
+        </tr>
+        <tr>
+        <td id="Clock96"></td>
+        <td id="Clock97"></td>
+        <td id="Clock98"></td>
+        <td id="Clock99"></td>
+        <td id="Clock100"></td>
+        <td id="Clock101"></td>
+        <td id="Clock102"></td>
+        <td id="Clock103"></td>
+        <td id="Clock104"></td>
+        <td id="Clock105"></td>
+        <td id="Clock106"></td>
+        <td id="Clock107"></td>
+        </tr>
+        <tr>
+        <td id="Clock108"></td>
+        <td id="Clock109"></td>
+        <td id="Clock110"></td>
+        <td id="Clock111"></td>
+        <td id="Clock112"></td>
+        <td id="Clock113"></td>
+        <td id="Clock114"></td>
+        <td id="Clock115"></td>
+        <td id="Clock116"></td>
+        <td id="Clock117"></td>
+        <td id="Clock118"></td>
+        <td id="Clock119"></td>
+        </tr>
+        <tr>
+        <td id="Clock120"></td>
+        <td id="Clock121"></td>
+        <td id="Clock122"></td>
+        <td id="Clock123"></td>
+        <td id="Clock124"></td>
+        <td id="Clock125"></td>
+        <td id="Clock126"></td>
+        <td id="Clock127"></td>
+        <td id="Clock128"></td>
+        <td id="Clock129"></td>
+        <td id="Clock130"></td>
+        <td id="Clock131"></td>
+        </tr>
+        <tr>
+        <td id="Clock132"></td>
+        <td id="Clock133"></td>
+        <td id="Clock134"></td>
+        <td id="Clock135"></td>
+        <td id="Clock136"></td>
+        <td id="Clock137"></td>
+        <td id="Clock138"></td>
+        <td id="Clock139"></td>
+        <td id="Clock140"></td>
+        <td id="Clock141"></td>
+        <td id="Clock142"></td>
+        <td id="Clock143"></td>
+        </tr>
+        <tr>
+        <td id="Clock144"></td>
+        <td id="Clock145"></td>
+        <td id="Clock146"></td>
+        <td id="Clock147"></td>
+        <td id="Clock148"></td>
+        <td id="Clock149"></td>
+        <td colspan=6 id="IST"></td>
+        </tr>
+    </table>
 </body>
 </html>
