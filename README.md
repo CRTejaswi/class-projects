@@ -7,20 +7,20 @@ Sincere apologies.
 - [__BE Project2__](BE%20Project2)
 > Contents of Bachelor's Degree Project 2 (Semester 8). <br>
 >
-__Title:__ Pico-Projector based Automation <br>
-__Aim:__ Classroom automation using a Pico-Projector configured with a Raspberry Pi server.<br>
-Makes use of WebRTC for in-browser communication & UV4L for screen-mirroring.
+> __Title:__ Pico-Projector based Automation <br>
+> __Aim:__ Classroom automation using a Pico-Projector configured with a Raspberry Pi server.<br>
+> Makes use of WebRTC for in-browser communication & UV4L for screen-mirroring.
 
 - [__BE Project1__](BE%20Project1)
 > Contents of Bachelor's Degree Project 1 (Semester 7).
 >
-__Title:__ OCR based Information Assistant<br>
-__Aim:__ Real-Time text-extraction from images, and conversion to speech.<br>
-Makes use of Tesseract-OCR for text-extraction & gTTS for text-to-speech conversion.
+> __Title:__ OCR based Information Assistant<br>
+> __Aim:__ Real-Time text-extraction from images, and conversion to speech.<br>
+> Makes use of Tesseract-OCR for text-extraction & gTTS for text-to-speech conversion.
 
 - [__Personal Info Assistant__](Personal%20Info%20Assistant)
 > QRCode-based info-assistant examples.<br>
-Makes use of QPython3 application for Android.
+> Makes use of QPython3 application for Android.
 
 - [__AVR-GSM__](AVR-GSM)
 > GSM communication with 8-bit AVRµc (ATmega32) using C, in AVRStudio4.
