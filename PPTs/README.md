@@ -2,6 +2,10 @@ This section consists of class presentations (PPTs) I've made in recent years, u
 There's no good reason to put these up here, than to have them for my own reference.
 But if these come in handy as templates for school/college students, I'd be glad.
 
+## LabFiles
+[2171008](https://www.gtu.ac.in/syllabus/NEW%20BE/Sem7/2171008.pdf)
+> Data Communication & Networking
+
 ### Bachelors in Engineering (BE)
 **1st Year:**
 * Electrical & Electronics Workshop (2110017):
