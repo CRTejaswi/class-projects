@@ -31,6 +31,9 @@ Sincere apologies.
 - [__8085-ADC&DAC__](8085-ADC&DAC)
 > ADC-DAC communication with 8-bit 8085µp using x86-asm.
 
+- [__Mod100Counter__](8085-ADC&DAC)
+> A Mod-100 Counter hardware implemtation using IC-7490 (Decade Counter) & IC-74248 (BCD to 7-Segment Decoder) that loops through 00-99.
+
 - [__World Time Interface__](World%20Time%20Interface)
 > Simple HTML Script to display current time for 150 countries.
 
