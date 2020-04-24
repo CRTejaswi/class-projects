@@ -4,6 +4,9 @@ Projects created as a part of classwork.<br>
 The work is not properly documented, and pieces of code are missing.<br>
 Sincere apologies.
 
+- [__SIH (2018)__](SIH2018)
+> Submissions for [Smart India Hackathon, 2018](https://www.sih.gov.in/sih2018Software). We proposed solutions for 3 problems, out of which 1 was selected. We implemented problem #ISR3, wherein we extracted text from community assets' images.
+
 - [__BE Project2__](BE%20Project2)
 > Contents of Bachelor's Degree Project 2 (Semester 8). <br>
 >
