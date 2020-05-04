@@ -7,7 +7,7 @@
 
 <center>
     <b>Demo (Project Setup)</b><br>
-    <video src="BE Project1/PPTs/groundtruthValidation.mp4" width="720" height="480" controls preload></video>
+    <video src="PPTs/groundtruthValidation.mp4" width="720" height="480" controls preload></video>
 </center>
 
 ```

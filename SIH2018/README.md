@@ -3,5 +3,5 @@
 
 <center>
     <b>Results</b><br>
-    <img src="SIH2018/results/1.jpg" height="512">
+    <img src="results/1.jpg" height="512">
 </center>
