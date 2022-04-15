@@ -6,6 +6,13 @@ But if these come in handy as templates for school/college students, I'd be glad
 [2171008](https://www.gtu.ac.in/syllabus/NEW%20BE/Sem7/2171008.pdf)
 > Data Communication & Networking
 
+### Masters in Technology (MTech)
+
+- [EE515: CarrySkip/CarryLookAhead Adders](MTechY1/ee515a.pdf)
+- [CS577: DEEQ](MTechY1/cs577a.pdf)
+- [CS577: FaceDetection](MTechY1/cs577b.pdf)
+
+
 ### Bachelors in Engineering (BE)
 **1st Year:**
 * Electrical & Electronics Workshop (2110017):
