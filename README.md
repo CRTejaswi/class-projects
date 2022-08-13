@@ -1,5 +1,8 @@
 # Class Projects <sup>[Reference ONLY]</sup>
 
+## Index
+- [Lab Reports](#lab-reports)
+
 Projects created as a part of classwork.<br>
 The work is not properly documented, and pieces of code are missing.<br>
 Sincere apologies.
@@ -42,3 +45,13 @@ Sincere apologies.
 
 - [__PPTs__](PPTs)
 > Consists of PPTs presented as classwork, uploaded as PDF files.
+
+## Lab Reports
+
+- [Data Communication/Networking (2171008)](2171008.pdf): OSI model, TCP/IP stack, network cli utilities, WireShark, PacketTracer.
+- [Data Communication/Networking Project1](2171008_oep1.pdf): Telnet/SSH simulation  on PacketTracer.
+- [Data Communication/Networking Project2](2171008_oep2.pdf): CHAP protocol simulation on PacketTracer.
+- [Cyber Security (2150002)](2150002.pdf): OSI model, TCP/IP stack, NMap, Netcat, WireShark, OpenVAS, DVWA.
+- [Design Engineering 2B (2160001)](2160001.pdf): Implemented product business model for QRCode based information assistant.
+- [VLSI Technology/Design (2161101)](2161101.pdf): Layouts (μWind) - NMOS/PMOS, nand/nor, inverter; RTL simulations (VHDL) of digital electronic blocks.
+
